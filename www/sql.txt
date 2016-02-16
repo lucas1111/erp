@@ -1,0 +1,37 @@
+creat database prject;
+--创建一张用户表
+create table users(
+id int primary key auto_increment,
+username varchar(64) unique not null,
+password varchar(64) not null,
+email varchar(64) not null);
+
+
+create table messages(
+id int unsigned primary key auto_increment,
+sender varchar(64) not null,
+getter varchar(64) not null,
+content varchar(3600) not null,
+sendTime datetime not null,
+isGet tinyint default 0)
+
+
+
+
+insert into messages (sender,getter,con,sendTime,isGet)values('123','1','123',now(),0)
+
+
+
+show variables like 'character%';查看数据库字符编码
+
+set character_set_client=utf8;客户端编码方式
+
+set character_set_connection= utf8;建立连接使用的编码
+
+set character_set_database= utf8;数据库的编码
+
+set character_set_results= utf8;结果集的编码
+
+set character_set_server= utf8;数据库服务器的编码
+
+set character_set_filesystem= utf8;数据库文件系统的编码
